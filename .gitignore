@@ -3,10 +3,12 @@
 *~
 # windows ignore
 *.obj
-StringFormat/Debug
-/ipch
 *.sdf
 *.suo
 *.opensdf
 *.user
 *.ncb
+
+/StringFormat/Debug
+/CacheBuffer/Debug
+/ipch
