@@ -1,0 +1,12 @@
+# linux ignore
+*.[oa]
+*~
+# windows ignore
+*.obj
+StringFormat/Debug
+/ipch
+*.sdf
+*.suo
+*.opensdf
+*.user
+*.ncb
