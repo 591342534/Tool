@@ -1,10 +1,17 @@
 // CacheBuffer.cpp : 定义控制台应用程序的入口点。
 //
 
-#include "stdafx.h"
+#include <iostream>
+#include "CacheBuffer.h"
 
-int _tmain(int argc, _TCHAR* argv[])
+int main(int argc, char* argv[])
 {
+	DSC::CTwoQueues tq;
+	tq.Init();
+
+
+	std::cout << "CacheBuffer test!" << std::endl;
+
 	return 0;
 }
 

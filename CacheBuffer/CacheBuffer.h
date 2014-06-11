@@ -10,12 +10,16 @@
 namespace DSC
 {
 
-#define __WINDOWS__
+//#define __WINDOWS__
+#define __LINUX__
+
+
+#include <assert.h>
+typedef unsigned int DWORD;
 
 #if defined(__WINDOWS__)
 
 #include <Windows.h>
-#include <assert.h>
 
 class MyLock
 {
@@ -27,7 +31,19 @@ public :
 	void Unlock( ){ LeaveCriticalSection(&m_Lock); }
 };
 
+DWORD GetCurrentTime()
+{
+	return GetTickCount();
+}
+
 #elif defined(__LINUX__)
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <errno.h>
+#include <string.h>
+#include <time.h>
 
 class MyLock
 {
@@ -38,6 +54,13 @@ public :
 	void Lock( ){ pthread_mutex_lock(&m_Mutex); }
 	void Unlock( ){ pthread_mutex_unlock(&m_Mutex); }
 };
+
+DWORD GetCurrentTime()
+{
+	struct timespec ts;
+	clock_gettime(CLOCK_MONOTONIC, &ts);
+	return (ts.tv_sec * 1000 + ts.tv_nsec / 1000000);
+}
 
 #endif
 
@@ -232,7 +255,7 @@ public :
 			m_pReadDataMem->_next = m_pWriteDataMem;
 
 			// 内存块清理时间和常驻使用内存块数量
-			m_dwMemClearTime = GetTickCount();
+			m_dwMemClearTime = GetCurrentTime();
 			m_wR2W = 0;
 		}
 
@@ -348,7 +371,7 @@ public :
 				}
 
 				// 内存清理
-				DWORD dwNow = GetTickCount();
+				DWORD dwNow = GetCurrentTime();
 				if (dwNow - m_dwMemClearTime > 10000)
 				{
 					if (m_wR2W < 2)
@@ -457,7 +480,7 @@ public :
 
 			// 重置部分数据
 			m_wR2W = 0;
-			m_dwMemClearTime = GetTickCount();
+			m_dwMemClearTime = GetCurrentTime();
 			m_nSwitchQueueTimes = 0;
 
 			m_pReadDataMem->ReSet();
