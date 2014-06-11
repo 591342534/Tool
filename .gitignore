@@ -8,6 +8,7 @@
 *.opensdf
 *.user
 *.ncb
+*.swp
 
 /StringFormat/Debug
 /CacheBuffer/Debug
