@@ -13,9 +13,14 @@
 /ipch
 /StringFormat/Debug
 /CacheBuffer/Debug
+/CacheBuffer/_UpgradeReport_Files
+
 /SockIO/SocketDemo/Debug
 /SockIO/SocketDemo/Release
-# /SockIO/SocketDemo/ipch
+/SockIO/SocketDemo/ipch
 /SockIO/SocketClient/Debug
 /SockIO/SocketClient/Release
+/SockIO/SocketClient/ipch
+/SockIO/SocketClient/OutRelease
+
 
