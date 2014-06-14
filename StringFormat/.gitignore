@@ -10,5 +10,9 @@
 *.ncb
 *.swp
 
+/Debug
+/Release
+/ipch
+
 
 

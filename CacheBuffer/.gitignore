@@ -10,5 +10,10 @@
 *.ncb
 *.swp
 
+/Debug
+/Release
+/ipch
+/_UpgradeReport_Files
+
 
 
