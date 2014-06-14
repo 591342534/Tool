@@ -10,6 +10,12 @@
 *.ncb
 *.swp
 
+/ipch
 /StringFormat/Debug
 /CacheBuffer/Debug
-/ipch
+/SockIO/SocketDemo/Debug
+/SockIO/SocketDemo/Release
+# /SockIO/SocketDemo/ipch
+/SockIO/SocketClient/Debug
+/SockIO/SocketClient/Release
+

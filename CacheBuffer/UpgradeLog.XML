@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="CacheBuffer">
+</Property><Property Name="Solution File" Value="E:\MySRC\GameDemo\Tool\Tool\CacheBuffer\CacheBuffer.sln">
+</Property><Property Name="Date" Value="2014年6月11日">
+</Property><Property Name="Time" Value="11:32">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="CacheBuffer.sln" Description="File successfully backed up as E:\MySRC\GameDemo\Tool\Tool\CacheBuffer\CacheBuffer.sln.old">
+</Event><Event ErrorLevel="0" Project="CacheBuffer" Source="CacheBuffer.vcproj" Description="Converting project file 'E:\MySRC\GameDemo\Tool\Tool\CacheBuffer\CacheBuffer.vcproj'.">
+</Event><Event ErrorLevel="1" Project="CacheBuffer" Source="CacheBuffer.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="CacheBuffer" Source="CacheBuffer.vcproj" Description="Done converting to new project file 'E:\MySRC\GameDemo\Tool\Tool\CacheBuffer\CacheBuffer.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="CacheBuffer" Source="CacheBuffer.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="CacheBuffer.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="CacheBuffer.sln" Description="Converted">
+</Event></UpgradeLog>
